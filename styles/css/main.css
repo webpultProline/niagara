@@ -718,6 +718,343 @@ class="slick-next slick-arrow"
 }
 /*
 -------------------------------------
+Галерея на главной
+-------------------------------------
+*/
+.gallery--section {
+	position: relative;
+	left: 0;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+}
+.gallery--container {
+	display: block;
+	margin-left: -4px;
+	margin-right: -4px;
+}
+.gallery--top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 33.333333333333%;
+    padding-right: 6px;
+	z-index: 2;
+}
+.gallery--nav {
+	padding-left: 3.333333333333333vw;
+	padding-top: 4.6875vw;
+	/* shape-for-gallery.svg */
+	background: #006a96 url(../img/svg/shape-for-gallery.svg) top 84% right -115% no-repeat;
+	background-size: auto 135%;
+	display: block;
+	width: 100%;
+	height: 14.27083333333333vw;
+}
+.gallery--nav .section--title {
+	color: #fff;
+}
+.gallery--nav .section--title:first-letter {
+	color: #fff;
+}
+.gallery--nav .section--title:before {
+	background: url(../img/svg/white-shape-for-link.svg) center no-repeat;
+	background-size: 47px 25px;
+}
+
+.gallery--nav .slider-btn {
+	position: absolute;
+	left: 2.604166666666667vw;
+	bottom: 30px;
+	border: 0;
+	background: transparent;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+}
+.gallery--nav .slider-btn:before {
+	font-family: 'niagara' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 39px;
+	color: #88dcf8;
+}
+.gallery--nav .slider-btn[data-action="prev"]:before {
+	content: "\e902";
+}
+.gallery--nav .slider-btn[data-action="next"] {
+	transform: translateX(49px);
+}
+.gallery--nav .slider-btn[data-action="next"]:before {
+	content: "\e903";
+}
+
+.gallery--row {
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	overflow: hidden;
+}
+.gallery--slide {
+	padding-left: 4px;
+	padding-right: 4px;
+	width: 33.333333333333%;
+	display: none;
+	transition: all .35s;
+}
+.gallery--item {
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	transition: all .35s;
+	
+	padding-top: 29px;
+	padding-right: 21px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	
+	overflow: hidden
+}
+.gallery--item:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,0.4);
+	content: '';
+	opacity: 0;
+	transition: opacity .35s;
+}
+.gallery--item:hover:after {
+	opacity: 1;
+}
+
+.gallery--slide_top {
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-ms-flex-align: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity .35s;
+	
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 3;
+}
+.gallery--item:hover .gallery--slide_top {
+	opacity: 1;
+}
+.socials--link {
+	display: inline;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: #fff;
+}
+.gallery--slide_top a {
+	margin-right: 30px;
+}
+.gallery--slide_top a:last-child {
+	margin-right: 0
+}
+.gallery--slide_top a:before {
+	font-family: 'niagara' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.socials--link.vk:before {
+	content: "\e904";
+}
+.socials--link.fb:before {
+	content: "\e906";
+}
+.gallery--slide_top a.vk:before {
+	font-size: 19px;
+}
+.gallery--slide_top a.fb:before {
+	font-size: 23px;
+}
+
+.gallery--slide_bottom {
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	-ms-flex-align: center;
+	align-items: center;
+	padding-right: 138px;
+}
+.gallery--slide_bottom h3 {
+	font-size: 30px;
+	color: #ffffff;
+	font-weight: 400;
+	margin: 0;
+	line-height: 1;
+	text-transform: uppercase;
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	opacity: 0;
+	transition: opacity .35s;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+	display: block;
+	width: 100%;
+	text-align: right;
+}
+.gallery--item:hover .gallery--slide_bottom h3 {
+	opacity: 1;
+}
+.gallery--slide.slide-current .gallery--slide_bottom h3 , .gallery--slide.slide-current + .slide .gallery--slide_bottom h3 {
+	font-size: 16px
+}
+.gallery--slide.slide-current .gallery--slide_bottom , .gallery--slide.slide-current + .slide .gallery--slide_bottom {
+	padding-right: 40px;
+}
+.gallery--slide_bottom--link {
+	width: 31px;
+	height: 31px;
+	border-radius: 100%;
+	text-decoration: none;
+	background-color: rgba(0,106,150,0.5);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	opacity: 1;
+	transition: opacity .35s , width .35s , height .35s, transform .35s;
+}
+.gallery--slide_bottom--link:after , .gallery--slide_bottom--link:before {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	background-color: #fff;
+	content: '';
+}
+.gallery--slide_bottom--link:after {
+	width: 12px;
+	height: 2px;
+}
+.gallery--slide_bottom--link:before {
+	height: 12px;
+	width: 2px;
+}
+.gallery--item:hover .gallery--slide_bottom--link:after , .gallery--item:hover .gallery--slide_bottom--link:before {
+	opacity: 0;
+}
+.gallery--item:hover .gallery--slide_bottom--link {
+	transform: translateY(-600%) scale(26.5) translateX(3%)
+}
+.gallery--slide.slide-current .gallery--item:hover .gallery--slide_bottom--link , .gallery--slide.slide-current + .slide .gallery--item:hover .gallery--slide_bottom--link {
+	transform: translateY(-200%) scale(9.5) translateX(3%)
+}
+
+.gallery--slide.slide-current .gallery--slide_top a, .gallery--slide.slide-current + .slide .gallery--slide_top a {
+	margin-right: 15px;
+}
+.gallery--slide.slide-current .gallery--slide_top a:last-child , .gallery--slide.slide-current + .slide .gallery--slide_top a:last-child {
+	margin-right: 0;
+}
+.gallery--slide.slide-current .gallery--slide_top a.vk:before , .gallery--slide.slide-current + .slide .gallery--slide_top a.vk:before {
+	font-size: 13px;
+}
+.gallery--slide.slide-current .gallery--slide_top a.fb:before , .gallery--slide.slide-current + .slide .gallery--slide_top a.fb:before {
+	font-size: 17px;
+}
+
+/* translateY(-200%) scale(9.5) translateX(3%) */
+
+.gallery--slide.slide-current {
+	width: 16.6666666666665%;
+	height: 14.73958333333334vw;
+	padding-top: 5px;
+	display: block;
+	margin-top: 14.73958333333334vw;
+}
+.gallery--slide.slide-current > .gallery--item {
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.gallery--slide.slide-current + .slide {
+	width: 16.6666666666665%;
+	height: 14.73958333333334vw;
+	padding-top: 5px;
+	display: block;
+	margin-top: 14.73958333333334vw;
+}
+.gallery--slide.slide-current + .slide > .gallery--item {
+	height: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+}
+.gallery--slide.slide-current + .slide + .slide {
+	display: block;
+}
+.gallery--slide.slide-current + .slide + .slide + .slide {
+	display: block;
+}
+/*
+-------------------------------------
 Подвал
 -------------------------------------
 */
@@ -761,6 +1098,24 @@ class="slick-next slick-arrow"
 	}
 	.first_carousel .slick-next.slick-arrow {
 		right: 20px
+	}
+}
+@media(max-width: 1400px){
+	/*
+	-------------------------------------
+	О компании
+	-------------------------------------
+	*/
+	.about_company--row_left {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 50px
+	}
+	.about_company--row_left p {
+		padding-left: 50px;
+	}
+	.about_company--row_left p > img {
+		width: 20px
 	}
 }
 
