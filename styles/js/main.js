@@ -168,5 +168,37 @@ $(function(){
 	
 	
 	
+	/*Каталог - навигация*/
+	//custom_selectEvents(true,true,$(this),'HasPopUp');
+	$('.navigation--catalog-btn').click(function(){
+		if($(this).hasClass('openOnEvent') == false){
+			custom_selectEvents(true,true,$(this),'navigation--catalog');
+			$(this).addClass('openOnEvent');
+		} else {
+			custom_selectEvents(false,true,$(this),'navigation--catalog');
+			$(this).removeClass('openOnEvent');
+		}
+	});
+	$('.navigation--catalog-close').click(function(){
+		$('.navigation--catalog-btn').removeClass('openOnEvent');
+		custom_selectEvents(false,true,$(this),'navigation--catalog');
+	});
+	
+	function custom_selectEvents(status_,onactive_,parent_,parent_class_){
+		window.custom_select = status_;
+		window.custom_select_block = onactive_;
+		window.custom_select_parent = parent_;
+		window.custom_select_parent_class = parent_class_;
+	}
 
+	$(window).click(function(event){
+		if(window.custom_select == true){
+			if($(event.target).parents().hasClass(window.custom_select_parent_class) == false && $(event.target).hasClass(window.custom_select_parent_class) == false){
+				if(window.custom_select_block == false){
+					window.custom_select_parent.removeClass('openOnEvent');
+				}
+			}
+			window.custom_select_block = false;
+		}
+	});
 });
