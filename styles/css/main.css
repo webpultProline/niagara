@@ -1773,6 +1773,11 @@ class="slick-next slick-arrow"
 }
 
 @media(max-width: 991px){
+	body.openNavigation {
+		overflow: hidden;
+	}
+	
+	
 	/*
 	-------------------------------------
 	Шапка
@@ -1789,7 +1794,7 @@ class="slick-next slick-arrow"
 		left: 0;
 		width: 100%;
 		z-index: 99;
-		border-bottom: 1px solid #006a96
+		box-shadow: 0 0 3px 0 #006a96;
 	}
 	.navigation > .container > .row {
 		height: 50px
@@ -1810,12 +1815,15 @@ class="slick-next slick-arrow"
 		padding-top: 0;
 		padding-bottom: 0
 	}
+	.navigation--catalog.moved {
+		transition: initial;
+		overflow: hidden;
+	}
 	.navigation--catalog .row {
 		margin-left: 0;
 		margin-right: 0;
 	}
 	.navigation--catalog .container {
-		max-width: 100%;
 		padding-left: 0;
 		padding-right: 0
 	}
@@ -1832,6 +1840,18 @@ class="slick-next slick-arrow"
 	}
 	.navigation--catalog-close {
 		display: none;
+	}
+	
+	.navigation--catalog-row-title {
+		font-size: 22px;
+		text-transform: uppercase;
+		color: #001923;
+		font-weight: 400;
+		line-height: 1;
+		position: relative;
+		left: 0;
+		top: 0;
+		margin: 0 0 12px;
 	}
 	
 	
@@ -1859,13 +1879,37 @@ class="slick-next slick-arrow"
 	.navigation--catalog-btn.openOnEvent + .navigation--catalog {
 		transform: translateY(100%) translateX(0);
 	}
+	.navigation--catalog-bottom .row {
+		height: auto;
+		padding: 25px 0 10px;
+	}
+	.navigation--catalog-bottom .row > div {
+		margin-bottom: 15px;
+		-ms-flex-pack: center !important;
+		justify-content: center !important;
+	}
+	.navigation--catalog-bottom .row > div > p {
+		text-align: center
+	}
+	.navigation--catalog-bottom .row > div > a.navigation--catalog-bottom-tel {
+		display: block;
+		margin: 0;
+		line-height: 1;
+		color: #001923;
+		font-size: 15px;
+		text-transform: uppercase;
+		text-align: center;
+		text-decoration: none!important
+	}
 	/*
 	-------------------------------------
 	Первая карусель
 	-------------------------------------
 	*/
 	.first_carousel--slide .row div {
-		width: 100%
+		width: 100%;
+		padding-left: 30px;
+		padding-right: 30px;
 	}
 	.first_carousel--slide h2 {
 		font-size: 30px
@@ -2074,17 +2118,10 @@ class="slick-next slick-arrow"
 	Шапка
 	-------------------------------------
 	*/
-	.navigation--catalog-bottom .row {
-		height: auto;
-		padding: 15px 0 0;
-	}
-	.navigation--catalog-bottom .row > div {
-		margin-bottom: 15px;
-		-ms-flex-pack: center !important;
-		justify-content: center !important;
-	}
-	.navigation--catalog-bottom .row > div > p {
-		text-align: center
+	.navigation--right {
+		text-align: left;
+		padding-right: 15px;
+		padding-left: 15px;
 	}
 	/*
 	-------------------------------------

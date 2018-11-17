@@ -17,13 +17,32 @@
 					<div class="row justify-content-between align-items-center">
 						<div class="col-lg-4 navigation--parent">
 							<nav class="navigation--row">
-								<button class="navigation--catalog-btn">Каталог</button>
+								<button class="navigation--catalog-btn"><span class="d-none d-lg-block">Каталог</span><span class="d-block d-lg-none">Меню</span></button>
 								<div class="navigation--catalog">
 									<div class="container">
+										<div class="navigation--catalog-row d-block d-lg-none">
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">новости</a></li>
+														<li><a href="#">контакты</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 navigation--right">
+													<ul>
+														<li class="navigation--right-lang"><a href="#" class="active">ru</a></li>
+														<li class="navigation--right-lang"><a href="#">en</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
 										<div class="navigation--catalog-row">
 											<button class="navigation--catalog-close"></button>
 											<div class="row justify-content-between">
 												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-12 d-block d-lg-none">
+													<h2 class="navigation--catalog-row-title">Каталог</h2>
+												</div>
 												<div class="col-lg-3 col-sm-4">
 													<ul class="navigation--catalog-links">
 														<li><a href="#">ДУШЕВЫЕ КАБИНЫ</a></li>
@@ -52,7 +71,8 @@
 											<div class="row justify-content-between align-items-center">
 												<div class="col-lg-1 d-none d-lg-block"></div>
 												<div class="col-lg-3 col-sm-4">
-													<p class="navigation--catalog-worktime">пн-вс 09:00 - 21:00</p>
+													<p class="navigation--catalog-worktime">пн-вс <time>09:00</time> - <time>21:00</time></p>
+													<a href="tel:+74956444033" class="navigation--catalog-bottom-tel d-block d-lg-none"><b>+7(495)644-40-33</b></a>
 												</div>
 												<div class="col-lg-3 col-sm-4">
 													<a href="#" class="navigation--catalog-nav">
@@ -465,7 +485,7 @@
 									<a href="#" class="socials--link inst"></a>
 									<div class="map--top--contacts_bottom">
 										<ul>
-											<li class="tel"><i></i><a href="tel:8 (495) 644 40 33">8 (495) 644 40 33</a></li>
+											<li class="tel"><i></i><a href="tel:+74956444033">8 (495) 644 40 33</a></li>
 											<li class="mail"><i></i><a href="mailto:info@niagaragroup.ru">info@niagaragroup.ru</a></li>
 											<li class="address"><i></i><address>142784, Москва д. Румянцево, БП «Румянцево», стр.2, блок Г, офис 353Г</address></li>
 										</ul>
