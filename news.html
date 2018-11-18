@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Список новостей</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles/css/bootstrap-grid.css">
+		
+		<link rel="stylesheet" href="styles/slick/slick.css">
+		
+		<link rel="stylesheet" href="styles/css/main.css">
+	</head>
+	<body>
+		<header>
+			<div class="navigation">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-4 navigation--parent">
+							<nav class="navigation--row">
+								<button class="navigation--catalog-btn"><span class="d-none d-lg-block">Каталог</span><span class="d-block d-lg-none">Меню</span></button>
+								<div class="navigation--catalog">
+									<div class="container">
+										<div class="navigation--catalog-row d-block d-lg-none">
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">новости</a></li>
+														<li><a href="#">контакты</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 navigation--right">
+													<ul>
+														<li class="navigation--right-lang"><a href="#" class="active">ru</a></li>
+														<li class="navigation--right-lang"><a href="#">en</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="navigation--catalog-row">
+											<button class="navigation--catalog-close"></button>
+											<div class="row justify-content-between">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-12 d-block d-lg-none">
+													<h2 class="navigation--catalog-row-title">Каталог</h2>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ КАБИНЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ БОКСЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ УГОЛКИ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ВАННЫ</a></li>
+														<li><a href="#">МЕБЕЛЬ ДЛЯ ВАННОЙ</a></li>
+														<li><a href="#">БИДЕ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ ОГРАЖДЕНИЯ</a></li>
+														<li><a href="#">ПОДДОН</a></li>
+														<li><a href="#">УНИТАЗЫ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+										<div class="navigation--catalog-bottom">
+											<div class="row justify-content-between align-items-center">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-lg-3 col-sm-4">
+													<p class="navigation--catalog-worktime">пн-вс <time>09:00</time> - <time>21:00</time></p>
+													<a href="tel:+74956444033" class="navigation--catalog-bottom-tel d-block d-lg-none"><b>+7(495)644-40-33</b></a>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<a href="#" class="navigation--catalog-nav">
+														<img src="styles/img/logo-gray.png" alt="">
+													</a>
+												</div>
+												<div class="col-lg-3 col-sm-4 d-flex flex-row flex-wrap justify-content-end align-items-center">
+													<a href="#" class="socials--link vk"></a>
+													<a href="#" class="socials--link fb"></a>
+													<a href="#" class="socials--link inst"></a>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="d-none d-lg-inline"><a href="#">новости</a></li>
+									<li class="d-none d-lg-inline"><a href="#">контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-4 navigation--logo">
+							<a href="#">
+								<img src="styles/img/logo-nav.png" alt="">
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<nav class="navigation--right">
+								<ul>
+									<li class="navigation--right-tel d-none d-lg-inline"><a href="tel:+74956444033"><b>+7(495)644-40-33</b></a></li>
+									<li class="navigation--right-search">
+										<button class="navigation--search-btn"></button>
+									</li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#" class="active">ru</a></li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#">en</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="news--list">
+				<div class="container">
+					<div class="row flex-wrap justify-content-center align-items-center">
+						<nav class="bread--crumbs col-12">
+							<a href="#">Главная</a>
+							<a href="#">Новости</a>
+						</nav>
+					
+						<div class="col-lg-12 d-flex flex-row justify-content-center">
+							<h1 class="section--title">Новости</h1>
+						</div>
+						
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>Niagara Group обновила свой сайт</span></a>
+							</article>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news2.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>Акция на душевые кабины Niagara!</span></a>
+							</article>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news3.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>У нас пополнение! Новая модель <br/>душевого уголка.</span></a>
+							</article>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>Niagara Group обновила свой сайт</span></a>
+							</article>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news2.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>Акция на душевые кабины Niagara!</span></a>
+							</article>
+						</div>
+						<div class="col-lg-4 col-md-6">
+							<article class="news--card" style="background-image: url(styles/img/temp/news3.jpg)">
+								<section class="news--card-time">
+									<time datetime="2018-11-15 19:00">15.11.2018</time>
+								</section>
+								<a href="#"><span>У нас пополнение! Новая модель <br/>душевого уголка.</span></a>
+							</article>
+						</div>
+						
+						<div class="pagination">
+							<a href="#" class="pagination--prev"><img src="styles/img/svg/arrow-left.svg" alt=""></a>
+							<a href="#" class="pagination--prev_all">...</a>
+							<a href="#">4</a>
+							<a href="#" class="pagination--curent">5</a>
+							<a href="#">6</a>
+							<a href="#" class="pagination--next_all">...</a>
+							<a href="#" class="pagination--next"><img src="styles/img/svg/arrow-right.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="map">
+				<div class="map--top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center">
+								<h2 class="section--title">Материалы для скачивания</h2>
+								<div class="slider" id="more--files-main" data-fade="1" data-autoPlay="1" data-dotsSet="0" data-arrowNav="0" data-count_def="3" data-xl_count="3" data-lg_count="2" data-md_count="2" data-sm_count="2">
+										<a href="#" class="file file--xls">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--word">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-between align-items-center">
+							<div class="col-lg-4 map--top-info">
+								<div class="map--top--contacts d-flex flex-row flex-wrap justify-content-start align-items-center">
+									<a href="#" class="socials--link vk"></a>
+									<a href="#" class="socials--link fb"></a>
+									<a href="#" class="socials--link inst"></a>
+									<div class="map--top--contacts_bottom">
+										<ul>
+											<li class="tel"><i></i><a href="tel:+74956444033">8 (495) 644 40 33</a></li>
+											<li class="mail"><i></i><a href="mailto:info@niagaragroup.ru">info@niagaragroup.ru</a></li>
+											<li class="address"><i></i><address>142784, Москва д. Румянцево, БП «Румянцево», стр.2, блок Г, офис 353Г</address></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-auto map--top-slider_btns">
+								<button class="map--top-slider_btn slider-out_btn" data-action="prev" data-slider="more--files-main"></button>
+								<button class="map--top-slider_btn slider-out_btn" data-action="next" data-slider="more--files-main"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="map--bottom" id="map--bottom_container"></div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer--copyright">
+				<div class="container">
+					<div class="row copyright--row align-items-center justify-content-between flex-wrap">
+						<p>© 2018 Niagara Group</p>
+						<a href="#">Создание сайта - компания “ВебПульт”</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Скрипты-->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="styles/js/jquery-3.3.1.js"></script>
+		<script src="styles/slick/slick.js"></script>
+		<script src="styles/js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles/css/bootstrap-grid.css">
+		
+		<link rel="stylesheet" href="styles/slick/slick.css">
+		<link rel="stylesheet" href="styles/customscrollbar/jquery.mCustomScrollbar.css">
+		
+		<link rel="stylesheet" href="styles/css/main.css">
+	</head>
+	<body>
+		<header>
+			<div class="navigation">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-4 navigation--parent">
+							<nav class="navigation--row">
+								<button class="navigation--catalog-btn"><span class="d-none d-lg-block">Каталог</span><span class="d-block d-lg-none">Меню</span></button>
+								<div class="navigation--catalog">
+									<div class="container">
+										<div class="navigation--catalog-row d-block d-lg-none">
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">новости</a></li>
+														<li><a href="#">контакты</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 navigation--right">
+													<ul>
+														<li class="navigation--right-lang"><a href="#" class="active">ru</a></li>
+														<li class="navigation--right-lang"><a href="#">en</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="navigation--catalog-row">
+											<button class="navigation--catalog-close"></button>
+											<div class="row justify-content-between">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-12 d-block d-lg-none">
+													<h2 class="navigation--catalog-row-title">Каталог</h2>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ КАБИНЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ БОКСЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ УГОЛКИ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ВАННЫ</a></li>
+														<li><a href="#">МЕБЕЛЬ ДЛЯ ВАННОЙ</a></li>
+														<li><a href="#">БИДЕ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ ОГРАЖДЕНИЯ</a></li>
+														<li><a href="#">ПОДДОН</a></li>
+														<li><a href="#">УНИТАЗЫ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+										<div class="navigation--catalog-bottom">
+											<div class="row justify-content-between align-items-center">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-lg-3 col-sm-4">
+													<p class="navigation--catalog-worktime">пн-вс <time>09:00</time> - <time>21:00</time></p>
+													<a href="tel:+74956444033" class="navigation--catalog-bottom-tel d-block d-lg-none"><b>+7(495)644-40-33</b></a>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<a href="#" class="navigation--catalog-nav">
+														<img src="styles/img/logo-gray.png" alt="">
+													</a>
+												</div>
+												<div class="col-lg-3 col-sm-4 d-flex flex-row flex-wrap justify-content-end align-items-center">
+													<a href="#" class="socials--link vk"></a>
+													<a href="#" class="socials--link fb"></a>
+													<a href="#" class="socials--link inst"></a>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="d-none d-lg-inline"><a href="#">новости</a></li>
+									<li class="d-none d-lg-inline"><a href="#">контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-4 navigation--logo">
+							<a href="#">
+								<img src="styles/img/logo-nav.png" alt="">
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<nav class="navigation--right">
+								<ul>
+									<li class="navigation--right-tel d-none d-lg-inline"><a href="tel:+74956444033"><b>+7(495)644-40-33</b></a></li>
+									<li class="navigation--right-search">
+										<button class="navigation--search-btn"></button>
+									</li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#" class="active">ru</a></li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#">en</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="catalog--list">
+				<div class="container">
+					<div class="row flex-wrap justify-content-center align-items-center">
+						<nav class="bread--crumbs col-12">
+							<a href="#">Главная</a>
+							<a href="#">каталог</a>
+						</nav>
+					
+						<div class="col-lg-12 d-flex flex-row justify-content-center">
+							<h1 class="section--title">каталог</h1>
+						</div>
+					</div>
+				</div>
+				
+				<div class="catalog--filer-row">
+					<div class="container">
+						<div class="row flex-wrap">
+							<div class="col-lg-4">
+								<div class="custom--select">
+									<input type="hidden">
+									<p class="custom--select-val">Бренд</p>
+									<button class="custom--select-status"></button>
+									<div class="custom--select-main">
+										<button class="custom--select-link" data-value="1">Бренд 1</button>
+										<button class="custom--select-link" data-value="2">Бренд 2</button>
+										<button class="custom--select-link" data-value="3">Бренд 3</button>
+										<button class="custom--select-link" data-value="4">Бренд 4</button>
+										<button class="custom--select-link" data-value="5">Бренд 5</button>
+										<button class="custom--select-link" data-value="6">Бренд 6</button>
+										<button class="custom--select-link" data-value="7">Бренд 7</button>
+										<button class="custom--select-link" data-value="8">Бренд 8</button>
+										<button class="custom--select-link" data-value="9">Бренд 9</button>
+										<button class="custom--select-link" data-value="10">Бренд 10</button>
+										<button class="custom--select-link" data-value="11">Бренд 11</button>
+										<button class="custom--select-link" data-value="12">Бренд 12</button>
+										<button class="custom--select-link" data-value="13">Бренд 13</button>
+										<button class="custom--select-link" data-value="14">Бренд 14</button>
+										<button class="custom--select-link" data-value="15">Бренд 15</button>
+										<button class="custom--select-link" data-value="16">Бренд 16</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="custom--select">
+									<input type="hidden">
+									<p class="custom--select-val">Размеры</p>
+									<button class="custom--select-status"></button>
+									<div class="custom--select-main">
+										<button class="custom--select-link" data-value="1">230 x 345 x 345 см</button>
+										<button class="custom--select-link" data-value="2">Размер 2</button>
+										<button class="custom--select-link" data-value="3">Размер 3</button>
+										<button class="custom--select-link" data-value="4">Размер 4</button>
+										<button class="custom--select-link" data-value="5">Размер 5</button>
+										<button class="custom--select-link" data-value="6">Размер 6</button>
+										<button class="custom--select-link" data-value="7">Размер 7</button>
+										<button class="custom--select-link" data-value="8">Размер 8</button>
+										<button class="custom--select-link" data-value="9">Размер 9</button>
+										<button class="custom--select-link" data-value="10">Размер 10</button>
+										<button class="custom--select-link" data-value="11">Размер 11</button>
+										<button class="custom--select-link" data-value="12">Размер 12</button>
+										<button class="custom--select-link" data-value="13">Размер 13</button>
+										<button class="custom--select-link" data-value="14">Размер 14</button>
+										<button class="custom--select-link" data-value="15">Размер 15</button>
+										<button class="custom--select-link" data-value="16">Размер 16</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="custom--select">
+									<input type="hidden">
+									<p class="custom--select-val">Товарная группа</p>
+									<button class="custom--select-status"></button>
+									<div class="custom--select-main">
+										<button class="custom--select-link" data-value="1">ДУШЕВЫЕ КАБИНЫ</button>
+										<button class="custom--select-link" data-value="2">ДУШЕВЫЕ БОКСЫ</button>
+										<button class="custom--select-link" data-value="3">ДУШЕВЫЕ УГОЛКИ</button>
+										<button class="custom--select-link" data-value="4">ВАННЫ</button>
+										<button class="custom--select-link" data-value="5">МЕБЕЛЬ ДЛЯ ВАННОЙ</button>
+										<button class="custom--select-link" data-value="6">БИДЕ</button>
+										<button class="custom--select-link" data-value="7">ДУШЕВЫЕ ОГРАЖДЕНИЯ</button>
+										<button class="custom--select-link" data-value="8">ПОДДОН</button>
+										<button class="custom--select-link" data-value="9">УНИТАЗЫ</button>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-12 catalog--filer-middle">
+								<label class="custom--radio">
+									<input type="checkbox">
+									<i></i>
+									<span>гидромассаж</span>
+								</label>
+								<label class="custom--radio">
+									<input type="checkbox">
+									<i></i>
+									<span>радио</span>
+								</label>
+								<label class="custom--radio">
+									<input type="checkbox">
+									<i></i>
+									<span>подсветка</span>
+								</label>
+								<label class="custom--radio">
+									<input type="checkbox">
+									<i></i>
+									<span>пульт управления</span>
+								</label>
+								<label class="custom--radio">
+									<input type="checkbox">
+									<i></i>
+									<span>турецкая баня</span>
+								</label>
+							</div>
+							
+							<div class="col-12 catalog--filer-bottom d-flex flex-row flex-wrap justify-content-end align-items-center">
+								<button class="btn"><span>показать</span></button>
+								<button class="btn btn--light"><span>сбросить</span></button>
+							</div>
+						</div>
+					</div>
+					
+					<button class="d-block d-lg-none filter--view-more" data-open_text="Открыть" data-close_text="Скрыть"></button>
+				</div>
+					
+				<div class="container">
+					<div class="row flex-wrap justify-content-center align-items-center">
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-2.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-3.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-2.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-3.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-2.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						<div class="col-lg-4 col-md-6 catalog--item">
+							<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-3.jpg)">
+								<div class="gallery--slide_bottom">
+									<div class="gallery--slide_bottom--link"></div>
+								</div>
+							</a>
+							<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+						</div>
+						
+						<div class="pagination">
+							<a href="#" class="pagination--prev"><img src="styles/img/svg/arrow-left.svg" alt=""></a>
+							<a href="#" class="pagination--prev_all">...</a>
+							<a href="#">4</a>
+							<a href="#" class="pagination--curent">5</a>
+							<a href="#">6</a>
+							<a href="#" class="pagination--next_all">...</a>
+							<a href="#" class="pagination--next"><img src="styles/img/svg/arrow-right.svg" alt=""></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="map">
+				<div class="map--top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center">
+								<h2 class="section--title">Материалы для скачивания</h2>
+								<div class="slider" id="more--files-main" data-fade="1" data-autoPlay="1" data-dotsSet="0" data-arrowNav="0" data-count_def="3" data-xl_count="3" data-lg_count="2" data-md_count="2" data-sm_count="2">
+										<a href="#" class="file file--xls">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--word">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-between align-items-center">
+							<div class="col-lg-4 map--top-info">
+								<div class="map--top--contacts d-flex flex-row flex-wrap justify-content-start align-items-center">
+									<a href="#" class="socials--link vk"></a>
+									<a href="#" class="socials--link fb"></a>
+									<a href="#" class="socials--link inst"></a>
+									<div class="map--top--contacts_bottom">
+										<ul>
+											<li class="tel"><i></i><a href="tel:+74956444033">8 (495) 644 40 33</a></li>
+											<li class="mail"><i></i><a href="mailto:info@niagaragroup.ru">info@niagaragroup.ru</a></li>
+											<li class="address"><i></i><address>142784, Москва д. Румянцево, БП «Румянцево», стр.2, блок Г, офис 353Г</address></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-auto map--top-slider_btns">
+								<button class="map--top-slider_btn slider-out_btn" data-action="prev" data-slider="more--files-main"></button>
+								<button class="map--top-slider_btn slider-out_btn" data-action="next" data-slider="more--files-main"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="map--bottom" id="map--bottom_container"></div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer--copyright">
+				<div class="container">
+					<div class="row copyright--row align-items-center justify-content-between flex-wrap">
+						<p>© 2018 Niagara Group</p>
+						<a href="#">Создание сайта - компания “ВебПульт”</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Скрипты-->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="styles/js/jquery-3.3.1.js"></script>
+		<script src="styles/customscrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="styles/slick/slick.js"></script>
+		<script src="styles/js/main.js"></script>
+	</body>
+</html>
