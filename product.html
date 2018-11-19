@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Каталог</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles/css/bootstrap-grid.css">
+		
+		<link rel="stylesheet" href="styles/slick/slick.css">
+		<link rel="stylesheet" href="styles/customscrollbar/jquery.mCustomScrollbar.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css">
+		
+		<link rel="stylesheet" href="styles/css/main.css">
+	</head>
+	<body>
+	
+		<div class="modal" id="feedback">
+			<div class="modal-container">
+				<div class="modal-head">
+					<p class="section--title">оставить заявку</p>
+					<button class="close-modal"><span></span><span></span></button>
+				</div>
+				<div class="modal-body">
+					<label class="label--input">
+						<input type="text">
+						<span>Ваше имя<sup>*</sup></span>
+					</label>
+					<label class="label--input">
+						<input type="text" class="phone_input" placeholder="+7 (___) ___-__-__">
+					</label>
+					<p>Нажимая кнопку “Отправить”, Вы даете согласие на обработку <a href="#">персональных данных</a></p>
+					<div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+						<button class="btn"><span>отправить</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<header>
+			<div class="navigation">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-4 navigation--parent">
+							<nav class="navigation--row">
+								<button class="navigation--catalog-btn"><span class="d-none d-lg-block">Каталог</span><span class="d-block d-lg-none">Меню</span></button>
+								<div class="navigation--catalog">
+									<div class="container">
+										<div class="navigation--catalog-row d-block d-lg-none">
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">новости</a></li>
+														<li><a href="#">контакты</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 navigation--right">
+													<ul>
+														<li class="navigation--right-lang"><a href="#" class="active">ru</a></li>
+														<li class="navigation--right-lang"><a href="#">en</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="navigation--catalog-row">
+											<button class="navigation--catalog-close"></button>
+											<div class="row justify-content-between">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-12 d-block d-lg-none">
+													<h2 class="navigation--catalog-row-title">Каталог</h2>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ КАБИНЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ БОКСЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ УГОЛКИ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ВАННЫ</a></li>
+														<li><a href="#">МЕБЕЛЬ ДЛЯ ВАННОЙ</a></li>
+														<li><a href="#">БИДЕ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ ОГРАЖДЕНИЯ</a></li>
+														<li><a href="#">ПОДДОН</a></li>
+														<li><a href="#">УНИТАЗЫ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+										<div class="navigation--catalog-bottom">
+											<div class="row justify-content-between align-items-center">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-lg-3 col-sm-4">
+													<p class="navigation--catalog-worktime">пн-вс <time>09:00</time> - <time>21:00</time></p>
+													<a href="tel:+74956444033" class="navigation--catalog-bottom-tel d-block d-lg-none"><b>+7(495)644-40-33</b></a>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<a href="#" class="navigation--catalog-nav">
+														<img src="styles/img/logo-gray.png" alt="">
+													</a>
+												</div>
+												<div class="col-lg-3 col-sm-4 d-flex flex-row flex-wrap justify-content-end align-items-center">
+													<a href="#" class="socials--link vk"></a>
+													<a href="#" class="socials--link fb"></a>
+													<a href="#" class="socials--link inst"></a>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="d-none d-lg-inline"><a href="#">новости</a></li>
+									<li class="d-none d-lg-inline"><a href="#">контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-4 navigation--logo">
+							<a href="#">
+								<img src="styles/img/logo-nav.png" alt="">
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<nav class="navigation--right">
+								<ul>
+									<li class="navigation--right-tel d-none d-lg-inline"><a href="tel:+74956444033"><b>+7(495)644-40-33</b></a></li>
+									<li class="navigation--right-search">
+										<button class="navigation--search-btn"></button>
+									</li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#" class="active">ru</a></li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#">en</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="catalog--detail">
+				<div class="container">
+					<div class="row flex-wrap justify-content-center align-items-center">
+						<nav class="bread--crumbs col-12">
+							<a href="#">Главная</a>
+							<a href="#">каталог</a>
+							<a href="#">Душевая кабина SSWW WU102A</a>
+						</nav>
+						
+						<div class="product--description d-flex flex-row flex-wrap justify-content-start align-items-start">
+							<div class="col-lg-6">
+								<div class="slider product--image-main_slider" data-dotsSet="0" data-fade="1" data-autoPlay="1" data-arrowNav="0" data-count_def="1" data-xl_count="1" data-lg_count="1" data-md_count="1" data-sm_count="1">
+									<div><a href="styles/img/temp/gallery-1.jpg" data-fancybox="gallery" class="product--image-main" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+										<button class="product--image-main-decor"></button>
+									</a></div>
+									<div><a href="styles/img/temp/gallery-2.jpg" data-fancybox="gallery" class="product--image-main" style="background-image: url(styles/img/temp/gallery-2.jpg)">
+										<button class="product--image-main-decor"></button>
+									</a></div>
+									<div><a href="styles/img/temp/gallery-3.jpg" data-fancybox="gallery" class="product--image-main" style="background-image: url(styles/img/temp/gallery-3.jpg)">
+										<button class="product--image-main-decor"></button>
+									</a></div>
+									<div><a href="styles/img/temp/gallery-4.jpg" data-fancybox="gallery" class="product--image-main" style="background-image: url(styles/img/temp/gallery-4.jpg)">
+										<button class="product--image-main-decor"></button>
+									</a></div>
+								</div>
+								
+								<div class="row">
+									<div class="slider product--image-small_slider" data-dotsSet="0" data-fade="1" data-autoPlay="1" data-arrowNav="0" data-count_def="3" data-xl_count="3" data-lg_count="3" data-md_count="2" data-sm_count="2">
+										<div class="col-12"><div class="product--image-small" style="background-image: url(styles/img/temp/gallery-1.jpg)"></div></div>
+										<div class="col-12"><div class="product--image-small" style="background-image: url(styles/img/temp/gallery-2.jpg)"></div></div>
+										<div class="col-12"><div class="product--image-small orbit" style="background-image: url(styles/img/temp/gallery-3.jpg)"></div></div>
+										<div class="col-12"><div class="product--image-small" style="background-image: url(styles/img/temp/gallery-4.jpg)"></div></div>
+									</div>
+									<div class="col-4 product--image-btns d-flex flex-row flex-wrap justify-content-center align-items-center">
+										<button class="product--image-btn" data-action="prev"></button>
+										<button class="product--image-btn" data-action="next"></button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6 product--description-right">
+								<div class="product--description-top">
+									<h1 class="product--name">Душевая кабина SSWW WU102A</h1>
+									<p class="product--info">БЕССИЛИКОНОВАЯ сборка Ванны, поддоны экраны и задние стенки - 100% акрил, армированный по всей площади. </p>
+									<div class="product--socials">
+										<a href="#" class="socials--link vk"></a>
+										<a href="#" class="socials--link fb"></a>
+										<a href="#" class="socials--link inst"></a>
+									</div>
+								</div>
+								<table>
+									<tr>
+										<td><span>Форма:</span></td>
+										<td><span>Ассиметричная</span></td>
+									</tr>
+									<tr>
+										<td><span>Цвет передних стекол:</span></td>
+										<td><span>Зеркальное</span></td>
+									</tr>
+									<tr>
+										<td><span>Разное:</span></td>
+										<td><span>Гидромассаж</span></td>
+									</tr>
+									<tr>
+										<td><span>Размер:</span></td>
+										<td><span>120 x 85 x 220</span></td>
+									</tr>
+								</table>
+								<button class="btn openModalBTN" data-targetModal="feedback"><span>оставить заявку</span></button>
+							</div>
+						</div>
+						
+						<div class="col-12">
+							<div class="tabs--btn_group">
+								<button class="tabs--btn active" data-parent="product--tabs" data-tab="product--main">характеристики</button>
+								<button class="tabs--btn" data-parent="product--tabs" data-tab="product--reviews">отзывы</button>
+								<button class="tabs--btn" data-parent="product--tabs" data-tab="product--videos">видео</button>
+								
+								<div class="tabs--btn_indicator"></div>
+							</div>
+							<div class="product--tabs" id="product--tabs">
+								<div class="product--tab open" id="product--main">
+									<div class="typography">
+										<ul>
+											<li>Сенсорная электронная панель управления S167BTT с радио и функцией BLUETOOTH</li>
+											<li>Двери из полированного сверхпрочного закаленого стекла EN 151120  с анти грязевым покрытием</li>
+											<li>Ручной душ с силиконовыми форсунками и гладким шлангом</li>
+											<li>Верхний душ, дверные ручки, накладки на динамик и вентилятор - из нержавеющей стали</li>
+											<li>Быстросъемные металлические бесшумные двойные ролики</li>
+											<li>Душевая штанга с регулировкой лейки по высоте</li>
+											<li>LED подсветка. Слив\перелив из латуни. Массаж ног</li>
+										</ul>
+										<!--Вывел текст для теста, может пригодится-->
+										<p>Задача организации, в особенности же новая модель организационной деятельности представляет собой интересный эксперимент проверки дальнейших направлений развития. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании форм развития. Таким образом дальнейшее развитие различных форм деятельности позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+										<br><br>
+										Идейные соображения высшего порядка, а также новая модель организационной деятельности представляет собой интересный эксперимент проверки позиций, занимаемых участниками в отношении поставленных задач. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа направлений прогрессивного развития. С другой стороны дальнейшее развитие различных форм деятельности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Товарищи! начало повседневной работы по формированию позиции требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Товарищи! сложившаяся структура организации позволяет выполнять важные задания по разработке существенных финансовых и административных условий. С другой стороны реализация намеченных плановых заданий играет важную роль в формировании систем массового участия.</p>
+									</div>
+									
+									<div class="product--documents">
+										<ul>
+											<li><a href="#" class="exel"><span>Посмотреть схему</span></a></li>
+											<li><a href="#" class="word"><span>Посмотреть инструкцию</span></a></li>
+											<li><a href="#" class="pdf"><span>Посмотреть схему. Пример текста</span></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="product--tab" id="product--reviews">
+									<article class="reviews--main">
+										<section class="reviews--left">
+											<h2>Анна Ковальская</h2>
+											<time datetime="2018-10-26 19:00">26 Октября 2018</time>
+										</section>
+										<section class="reviews--right">
+											<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+										</section>
+										<footer>
+											<button>Имя</button>
+											<button>Цитировать</button>
+										</footer>
+									</article>
+									<article class="reviews--main">
+										<section class="reviews--left">
+											<h2>Игорь</h2>
+											<time datetime="2018-10-26 19:00">26 Октября 2018</time>
+										</section>
+										<section class="reviews--right">
+											<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+										</section>
+										<footer>
+											<button>Имя</button>
+											<button>Цитировать</button>
+										</footer>
+									</article>
+									
+									<form>
+										<div class="reviews--form">
+											<p class="form--title">Оставить отзыв</p>
+											<div class="form--right">
+												<label class="label--input">
+													<input type="text">
+													<span>Ваше имя<sup>*</sup></span>
+												</label>
+												<label class="label--input">
+													<textarea></textarea>
+													<span>Ваше имя<sup>*</sup></span>
+												</label>
+												<button class="btn"><span>Отправить</span></button>
+											</div>
+										</div>
+									</form>
+									
+								</div>
+								<div class="product--tab" id="product--videos">
+									<div class="row flex-wrap align-items-start justify-content-start">
+										<!--<div class="col-lg-4 col-md-6 product--video">
+											<iframe src="https://www.youtube.com/embed/_sI_Ps7JSEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+										<div class="col-lg-4 col-md-6 product--video">
+											<iframe src="https://www.youtube.com/embed/_sI_Ps7JSEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>
+										<div class="col-lg-4 col-md-6 product--video">
+											<iframe src="https://www.youtube.com/embed/_sI_Ps7JSEk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+										</div>-->
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="catalog--more d-flex flex-row flex-wrap justify-content-center align-items-center">
+							<h2 class="section--title">может быть интересно</h2>
+							<div class="slider" data-fade="1" data-dotsSet="0" data-arrowNav="1" data-count_def="3" data-xl_count="3" data-lg_count="2" data-md_count="1" data-sm_count="1">
+								<div class="col-12">
+									<div class="catalog--item">
+										<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+											<div class="gallery--slide_bottom">
+												<div class="gallery--slide_bottom--link"></div>
+											</div>
+										</a>
+										<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="catalog--item">
+										<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+											<div class="gallery--slide_bottom">
+												<div class="gallery--slide_bottom--link"></div>
+											</div>
+										</a>
+										<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="catalog--item">
+										<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+											<div class="gallery--slide_bottom">
+												<div class="gallery--slide_bottom--link"></div>
+											</div>
+										</a>
+										<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="catalog--item">
+										<a href="#" class="gallery--item" style="background-image: url(styles/img/temp/gallery-1.jpg)">
+											<div class="gallery--slide_bottom">
+												<div class="gallery--slide_bottom--link"></div>
+											</div>
+										</a>
+										<a href="#" class="catalog--item--link">Душевая кабина SSWW WU102A</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="map">
+				<div class="map--top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12 d-flex flex-row flex-wrap justify-content-start align-items-center">
+								<h2 class="section--title">Материалы для скачивания</h2>
+								<div class="slider" id="more--files-main" data-fade="1" data-autoPlay="1" data-dotsSet="0" data-arrowNav="0" data-count_def="3" data-xl_count="3" data-lg_count="2" data-md_count="2" data-sm_count="2">
+										<a href="#" class="file file--xls">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--word">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+										<a href="#" class="file file--pdf">
+											<h3>Прайс лист <br>Ниагара от 13.08.18</h3>
+										</a>
+								</div>
+							</div>
+						</div>
+						<div class="row justify-content-between align-items-center">
+							<div class="col-lg-4 map--top-info">
+								<div class="map--top--contacts d-flex flex-row flex-wrap justify-content-start align-items-center">
+									<a href="#" class="socials--link vk"></a>
+									<a href="#" class="socials--link fb"></a>
+									<a href="#" class="socials--link inst"></a>
+									<div class="map--top--contacts_bottom">
+										<ul>
+											<li class="tel"><i></i><a href="tel:+74956444033">8 (495) 644 40 33</a></li>
+											<li class="mail"><i></i><a href="mailto:info@niagaragroup.ru">info@niagaragroup.ru</a></li>
+											<li class="address"><i></i><address>142784, Москва д. Румянцево, БП «Румянцево», стр.2, блок Г, офис 353Г</address></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-auto map--top-slider_btns">
+								<button class="map--top-slider_btn slider-out_btn" data-action="prev" data-slider="more--files-main"></button>
+								<button class="map--top-slider_btn slider-out_btn" data-action="next" data-slider="more--files-main"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="map--bottom" id="map--bottom_container"></div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer--copyright">
+				<div class="container">
+					<div class="row copyright--row align-items-center justify-content-between flex-wrap">
+						<p>© 2018 Niagara Group</p>
+						<a href="#">Создание сайта - компания “ВебПульт”</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Скрипты-->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="styles/js/jquery-3.3.1.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+		
+		<script src="styles/inputmask/jquery.inputmask.bundle.js"></script>
+		<script src="styles/inputmask/phone.js"></script>
+		<script src="styles/inputmask/phone-ru.js"></script>
+		
+		<script src="styles/customscrollbar/jquery.mCustomScrollbar.js"></script>
+		<script src="styles/slick/slick.js"></script>
+		<script src="styles/js/main.js"></script>
+	</body>
+</html>

@@ -335,6 +335,126 @@ $(function(){
 		$(this).parent().toggleClass('open');
 		$(this).parent().find('.container').first().stop().slideToggle(350);
 	});
+	/*табы*/
+	function setIndicator(){
+		var active_btn = $('.tabs--btn.active');
+		var position_left = active_btn.position().left;
+		var width_btn = active_btn.outerWidth();
+		var setPos = position_left+(width_btn/2)-($('.tabs--btn_indicator').width()/2);
+		$('.tabs--btn_indicator').css('left',setPos+'px')
+	}
+	if($('.tabs--btn_indicator').length > 0){
+		setIndicator();
+	}
+	$('.tabs--btn').click(function(){
+		$('.tabs--btn').removeClass('active');
+		$(this).addClass('active');
+		setIndicator();
+		$("#"+$(this).attr('data-parent')).find('.product--tab').removeClass('open');
+		$("#"+$(this).attr('data-parent')).find('#'+$(this).attr('data-tab')).addClass('open');
+	});
+	/*инпуты*/
+	$('.label--input input , .label--input textarea').change(function(){
+		if($(this).val() != ''){
+			$(this).addClass('val');
+		} else {
+			$(this).removeClass('val');
+		}
+	});
+	/*карточка товаров*/
+	$('[data-fancybox="gallery"]').fancybox({
+		backFocus : false,
+		btnTpl: {
+			download: '',
+			arrowLeft: 	'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+						'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
+						'<path style="fill: #ffffff" d="M11775.22 13106.63l-3681.3 -2428.65 3681.3 -2428.66 0 4857.31zm-1275.22 -13106.63c5789.7,0 10500,4710.3 10500,10500 0,5789.7 -4710.3,10500 -10500,10500 -5789.7,0 -10500,-4710.3 -10500,-10500 0,-5789.7 4710.3,-10500 10500,-10500zm0 20475c5500.43,0 9975,-4474.57 9975,-9975 0,-5500.43 -4474.57,-9975 -9975,-9975 -5500.43,0 -9975,4474.58 -9975,9975 0,5500.42 4474.57,9975 9975,9975z"/>'+
+						'</svg></div>'+
+						'</button>',
+			arrowRight:	'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+						'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
+						'<path style="fill: #ffffff" d="M9224.78 13106.63l3681.3 -2428.65 -3681.3 -2428.66 0 4857.31zm1275.22 -13106.63c-5789.7,0 -10500,4710.3 -10500,10500 0,5789.7 4710.3,10500 10500,10500 5789.7,0 10500,-4710.3 10500,-10500 0,-5789.7 -4710.3,-10500 -10500,-10500zm0 20475c-5500.43,0 -9975,-4474.57 -9975,-9975 0,-5500.43 4474.57,-9975 9975,-9975 5500.43,0 9975,4474.58 9975,9975 0,5500.42 -4474.57,9975 -9975,9975z"/>'+
+						'</svg></div>' +
+						'</button>',
+		}
+	});
+	if($('.product--image-small_slider').length > 0){
+		$('.product--image-btn').click(function(){
+			var action = $(this).attr('data-action');
+			switch(action){
+				case 'prev' : {
+					$('.product--image-small_slider').slick('slickPrev');
+					$('.product--image-main_slider').slick('slickPrev');
+				} break;
+				case 'next' : {
+					$('.product--image-small_slider').slick('slickNext');
+					$('.product--image-main_slider').slick('slickNext');
+				} break;
+			}
+		});
+		
+		$('.product--image-small_slider').on('swipe', function(event, slick, currentSlide, nextSlide){
+			var curent = parseInt($('.product--image-small_slider .slick-slide.slick-current').attr('data-slick-index'),10);
+			$('.product--image-main_slider').slick('slickGoTo',curent);
+		});
+		$('.product--image-main_slider').on('swipe', function(event, slick, currentSlide, nextSlide){
+			var curent = parseInt($('.product--image-main_slider .slick-slide.slick-current').attr('data-slick-index'),10);
+			$('.product--image-small_slider').slick('slickGoTo',curent);
+		});
+	}
+	/*
+	модальные окна
+	*/
+	if($('.phone_input').length > 0){
+		$('.phone_input').inputmask({"mask": "+7 (999) 999-99-99"});
+	}
+	$('.openModalBTN').click(function(event){
+		event.preventDefault();
+		_setScrollbar();
+		$('body').addClass('openModal');
+		var targetBlock = $(this).attr('data-targetModal');
+		$('.modal').removeClass('openModal');
+		$('#'+targetBlock).addClass('openModal');
+	});
+	$('.close-modal').click(function(){
+		if($('.mobile-menu_btn').hasClass('open-menu') == false){
+			$('body').removeClass('openModal');
+			_resetScrollbar();
+		}
+		$(this).parents('.modal').removeClass('openModal');
+	});
+	$(window).click(function(event){
+		if($(event.target).hasClass('modal') == true){
+			if($('.mobile-menu_btn').hasClass('open-menu') == false){
+				$('body').removeClass('openModal');
+				_resetScrollbar();
+			}
+			$(event.target).removeClass('openModal');
+		}
+	});
+	
+	function _setScrollbar() {
+		var rect = document.body.getBoundingClientRect();
+		var _isBodyOverflowing = rect.left + rect.right < window.innerWidth;
+		var _scrollbarWidth = _getScrollbarWidth();
+        if(_isBodyOverflowing){
+			$('body').css('padding-right',_scrollbarWidth+'px');
+        }
+	};
+	//_setScrollbar();
+	
+	function _resetScrollbar(){
+		$('body').css('padding-right','0px');
+	}
+	
+	function _getScrollbarWidth() {
+		var scrollDiv = document.createElement('div');
+		scrollDiv.className = 'modal-scrollbar-measure';
+		document.body.appendChild(scrollDiv);
+		var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+		document.body.removeChild(scrollDiv);
+		return scrollbarWidth;
+	};
 	/*
 	-----
 	Карта
