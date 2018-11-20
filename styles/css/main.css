@@ -3148,6 +3148,152 @@ class="slick-next slick-arrow"
 	content: '';
 }
 /*
+-------------------------------------
+Страница контактов
+-------------------------------------
+*/
+.contacts--page {
+	padding-top: 14px;
+	padding-bottom: 70px;
+	border-top: 1px solid #d0d0d0;
+}
+.contacts--map {
+	margin-bottom: 65px;
+}
+.contacts--form input[type="text"] , .contacts--form textarea {
+	background-color: #f6f6f7;
+}
+.form--title {
+	font-size: 20px;
+	line-height: 1;
+	margin: 0 0 29px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #001923;
+}
+.contacts--form p {
+	margin: 0 0 25px;
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	color: #001923;
+}
+.contacts--form p a {
+	text-decoration: none;
+	display: inline;
+	color: #001923;
+	border-bottom: 1px solid #001923;
+}
+
+.contacts--page .section--title {
+	padding-left: 0.7333333333333333em;
+}
+.contacts--page .section--title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.6666666666666667em;
+    width: 2.266666666666667em;
+    height: 1.2em;
+    background: url(../img/svg/blue-shape-for-link.svg) center no-repeat;
+    background-size: 2.266666666666667em 1.2em;
+}
+
+.contacts--info {
+	display: block;
+	width: 100%;
+	padding: 0 0 50px;
+	margin: 0 0 45px;
+	border-bottom: 1px solid #d0d0d0
+}
+.contacts--info li {
+	list-style: none;
+	line-height: 1;
+	width: 100%;
+	position: relative;
+	left: 0;
+	top: 0;
+	margin-bottom: 25px;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.contacts--info li:last-child {
+	margin-bottom: 0
+}
+.contacts--info li a, .contacts--info li i {
+    width: 39px;
+    text-align: left;
+}
+.contacts--info li i:before {
+    font-family: 'niagara' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #001923;
+}
+.contacts--info li a, .contacts--info li.tel i:before {
+	content: "\e905";
+	font-size: 23px;
+}
+.contacts--info li a, .contacts--info li.mail i:before {
+	content: "\e90c";
+	font-size: 16px;
+}
+.contacts--info li a, .contacts--info li.address i:before {
+	content: "\e90b";
+	font-size: 21px;
+}
+.contacts--info li a, .contacts--info li address {
+	width: calc(100% - 39px);
+	text-decoration: none;
+	margin: 0;
+	line-height: 20px;
+	color: #001923;
+	font-size: 15px;
+	font-style: normal;
+}
+
+.contacts--page table td {
+    font-size: 15px;
+    color: #001923;
+}
+.contacts--page table td:first-child {
+    font-weight: 700;
+    padding-right: 0;
+	vertical-align: top
+}
+.contacts--page table td span {
+    padding-bottom: 25px;
+    display: inline-block;
+}
+.contacts--page table td:last-child {
+    padding-left: 15px;
+}
+.contacts--page table th {
+	font-weight: 400;
+	color: #001923;
+	text-align: left
+}
+.contacts--page table th span {
+	padding-left: 0;
+	padding-right: 0;
+    padding-bottom: 25px;
+    display: inline-block;
+}
+/*
 =============================================
 =============================================
 Адаптив
@@ -3701,6 +3847,18 @@ class="slick-next slick-arrow"
 	.product--tab .typography ul li {
 		line-height: 1.5em
 	}
+	/*
+	-------------------------------------
+	Страница контактов
+	-------------------------------------
+	*/
+	.contacts--block_1 {
+		order: 2;
+	}
+	.contacts--block_2 {
+		order: 1;
+		margin-bottom: 20px
+	}
 }
 
 @media(max-width: 768px){
@@ -3789,7 +3947,7 @@ class="slick-next slick-arrow"
 		margin-bottom: 35px
 	}
 	.map--bottom {
-		height: 100vw
+		height: 50vh
 	}
 	/*
 	-------------------------------------
@@ -3864,6 +4022,17 @@ class="slick-next slick-arrow"
 	.catalog--more .slider .slick-arrow.slick-next {
 		right: 0;
 		transform: translateX(0) translateY(-100%);
+	}
+	/*
+	-------------------------------------
+	Страница контактов
+	-------------------------------------
+	*/
+	.contacts--map {
+		margin-bottom: 25px
+	}
+	.contacts--page table td , .contacts--page table th span {
+		font-size: 14px;
 	}
 }
 

@@ -362,22 +362,24 @@ $(function(){
 		}
 	});
 	/*карточка товаров*/
-	$('[data-fancybox="gallery"]').fancybox({
-		backFocus : false,
-		btnTpl: {
-			download: '',
-			arrowLeft: 	'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
-						'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
-						'<path style="fill: #ffffff" d="M11775.22 13106.63l-3681.3 -2428.65 3681.3 -2428.66 0 4857.31zm-1275.22 -13106.63c5789.7,0 10500,4710.3 10500,10500 0,5789.7 -4710.3,10500 -10500,10500 -5789.7,0 -10500,-4710.3 -10500,-10500 0,-5789.7 4710.3,-10500 10500,-10500zm0 20475c5500.43,0 9975,-4474.57 9975,-9975 0,-5500.43 -4474.57,-9975 -9975,-9975 -5500.43,0 -9975,4474.58 -9975,9975 0,5500.42 4474.57,9975 9975,9975z"/>'+
-						'</svg></div>'+
-						'</button>',
-			arrowRight:	'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
-						'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
-						'<path style="fill: #ffffff" d="M9224.78 13106.63l3681.3 -2428.65 -3681.3 -2428.66 0 4857.31zm1275.22 -13106.63c-5789.7,0 -10500,4710.3 -10500,10500 0,5789.7 4710.3,10500 10500,10500 5789.7,0 10500,-4710.3 10500,-10500 0,-5789.7 -4710.3,-10500 -10500,-10500zm0 20475c-5500.43,0 -9975,-4474.57 -9975,-9975 0,-5500.43 4474.57,-9975 9975,-9975 5500.43,0 9975,4474.58 9975,9975 0,5500.42 -4474.57,9975 -9975,9975z"/>'+
-						'</svg></div>' +
-						'</button>',
-		}
-	});
+	if($('[data-fancybox="gallery"]').length > 0){
+		$('[data-fancybox="gallery"]').fancybox({
+			backFocus : false,
+			btnTpl: {
+				download: '',
+				arrowLeft: 	'<button data-fancybox-prev class="fancybox-button fancybox-button--arrow_left" title="{{PREV}}">' +
+							'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
+							'<path style="fill: #ffffff" d="M11775.22 13106.63l-3681.3 -2428.65 3681.3 -2428.66 0 4857.31zm-1275.22 -13106.63c5789.7,0 10500,4710.3 10500,10500 0,5789.7 -4710.3,10500 -10500,10500 -5789.7,0 -10500,-4710.3 -10500,-10500 0,-5789.7 4710.3,-10500 10500,-10500zm0 20475c5500.43,0 9975,-4474.57 9975,-9975 0,-5500.43 -4474.57,-9975 -9975,-9975 -5500.43,0 -9975,4474.58 -9975,9975 0,5500.42 4474.57,9975 9975,9975z"/>'+
+							'</svg></div>'+
+							'</button>',
+				arrowRight:	'<button data-fancybox-next class="fancybox-button fancybox-button--arrow_right" title="{{NEXT}}">' +
+							'<div><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21000 21000">'+
+							'<path style="fill: #ffffff" d="M9224.78 13106.63l3681.3 -2428.65 -3681.3 -2428.66 0 4857.31zm1275.22 -13106.63c-5789.7,0 -10500,4710.3 -10500,10500 0,5789.7 4710.3,10500 10500,10500 5789.7,0 10500,-4710.3 10500,-10500 0,-5789.7 -4710.3,-10500 -10500,-10500zm0 20475c-5500.43,0 -9975,-4474.57 -9975,-9975 0,-5500.43 4474.57,-9975 9975,-9975 5500.43,0 9975,4474.58 9975,9975 0,5500.42 -4474.57,9975 -9975,9975z"/>'+
+							'</svg></div>' +
+							'</button>',
+			}
+		});
+	}
 	if($('.product--image-small_slider').length > 0){
 		$('.product--image-btn').click(function(){
 			var action = $(this).attr('data-action');

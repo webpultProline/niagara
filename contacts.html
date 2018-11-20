@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Список новостей</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles/css/bootstrap-grid.css">
+		
+		<link rel="stylesheet" href="styles/slick/slick.css">
+		
+		<link rel="stylesheet" href="styles/css/main.css">
+	</head>
+	<body>
+		<header>
+			<div class="navigation">
+				<div class="container">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-4 navigation--parent">
+							<nav class="navigation--row">
+								<button class="navigation--catalog-btn"><span class="d-none d-lg-block">Каталог</span><span class="d-block d-lg-none">Меню</span></button>
+								<div class="navigation--catalog">
+									<div class="container">
+										<div class="navigation--catalog-row d-block d-lg-none">
+											<div class="row">
+												<div class="col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">новости</a></li>
+														<li><a href="#">контакты</a></li>
+													</ul>
+												</div>
+												<div class="col-sm-4 navigation--right">
+													<ul>
+														<li class="navigation--right-lang"><a href="#" class="active">ru</a></li>
+														<li class="navigation--right-lang"><a href="#">en</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="navigation--catalog-row">
+											<button class="navigation--catalog-close"></button>
+											<div class="row justify-content-between">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-12 d-block d-lg-none">
+													<h2 class="navigation--catalog-row-title">Каталог</h2>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ КАБИНЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ БОКСЫ</a></li>
+														<li><a href="#">ДУШЕВЫЕ УГОЛКИ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ВАННЫ</a></li>
+														<li><a href="#">МЕБЕЛЬ ДЛЯ ВАННОЙ</a></li>
+														<li><a href="#">БИДЕ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<ul class="navigation--catalog-links">
+														<li><a href="#">ДУШЕВЫЕ ОГРАЖДЕНИЯ</a></li>
+														<li><a href="#">ПОДДОН</a></li>
+														<li><a href="#">УНИТАЗЫ</a></li>
+													</ul>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+										<div class="navigation--catalog-bottom">
+											<div class="row justify-content-between align-items-center">
+												<div class="col-lg-1 d-none d-lg-block"></div>
+												<div class="col-lg-3 col-sm-4">
+													<p class="navigation--catalog-worktime">пн-вс <time>09:00</time> - <time>21:00</time></p>
+													<a href="tel:+74956444033" class="navigation--catalog-bottom-tel d-block d-lg-none"><b>+7(495)644-40-33</b></a>
+												</div>
+												<div class="col-lg-3 col-sm-4">
+													<a href="#" class="navigation--catalog-nav">
+														<img src="styles/img/logo-gray.png" alt="">
+													</a>
+												</div>
+												<div class="col-lg-3 col-sm-4 d-flex flex-row flex-wrap justify-content-end align-items-center">
+													<a href="#" class="socials--link vk"></a>
+													<a href="#" class="socials--link fb"></a>
+													<a href="#" class="socials--link inst"></a>
+												</div>
+												<div class="col-lg-1 d-none d-lg-block"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<ul>
+									<li class="d-none d-lg-inline"><a href="#">новости</a></li>
+									<li class="d-none d-lg-inline"><a href="#">контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-lg-4 navigation--logo">
+							<a href="#">
+								<img src="styles/img/logo-nav.png" alt="">
+							</a>
+						</div>
+						<div class="col-lg-4">
+							<nav class="navigation--right">
+								<ul>
+									<li class="navigation--right-tel d-none d-lg-inline"><a href="tel:+74956444033"><b>+7(495)644-40-33</b></a></li>
+									<li class="navigation--right-search">
+										<button class="navigation--search-btn"></button>
+									</li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#" class="active">ru</a></li>
+									<li class="navigation--right-lang d-none d-lg-inline"><a href="#">en</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="contacts--page">
+				<div class="container">
+					<div class="row flex-wrap justify-content-center align-items-center">
+						<nav class="bread--crumbs col-12">
+							<a href="#">Главная</a>
+							<a href="#">Новости</a>
+						</nav>
+					</div>
+				</div>
+				<div class="map--bottom contacts--map" id="map--bottom_container"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 contacts--block_1">
+							<h2 class="section--title">наши контакты</h2>
+							
+							<ul class="contacts--info">
+								<li class="tel"><i></i><a href="tel:+74956444033">8 (495) 644 40 33</a></li>
+								<li class="mail"><i></i><a href="mailto:info@niagaragroup.ru">info@niagaragroup.ru</a></li>
+								<li class="address"><i></i><address>142784, Москва д. Румянцево, БП «Румянцево», стр.2, блок Г, офис 353Г</address></li>
+							</ul>
+							
+							<div class="contacts--form">
+								<form>
+									<h2 class="form--title">оставить заявку</h2>
+									<label class="label--input">
+										<input type="text">
+										<span>Ваше имя<sup>*</sup></span>
+									</label>
+									<label class="label--input">
+										<input type="text" class="phone_input" placeholder="+7 (___) ___-__-__" im-insert="true">
+									</label>
+									<label class="label--input">
+										<textarea></textarea>
+										<span>Ваше имя<sup>*</sup></span>
+									</label>
+									<p>Нажимая кнопку “Отправить”, Вы даете согласие на обработку <a href="#">персональных данных</a></p>
+									<button class="btn"><span>Отправить</span></button>
+								</form>
+							</div>
+						</div>
+						
+						<div class="col-lg-6 contacts--block_2">
+							<h2 class="section--title">наши реквизиты</h2>
+							
+							<table>
+								<tr>
+									<th colspan="2"><span>Общество  с ограниченной ответственностью «ГК СИНЕРГИЯ»</span></th>
+								</tr>
+								<tr>
+									<td><span>ИНН/КПП</span></td>
+									<td><span>7751513993/773101001</span></td>
+								</tr>
+								<tr>
+									<td><span>ОГРН</span></td>
+									<td><span>1137746722772</span></td>
+								</tr>
+								<tr>
+									<td><span>ОКПО</span></td>
+									<td><span>17956139 </span></td>
+								</tr>
+								<tr>
+									<td><span>ОКАТО</span></td>
+									<td><span>45297565106</span></td>
+								</tr>
+								<tr>
+									<td><span>ОКОПФ</span></td>
+									<td><span>1265</span></td>
+								</tr>
+								<tr>
+									<td><span>ОКВЭД</span></td>
+									<td><span>46.73.3</span></td>
+								</tr>
+								<tr>
+									<td><span>Юридический адрес:</span></td>
+									<td><span>121433, г. Москва, ул. Филевская М., д. 46,<br/> этаж 1, каб. 11</span></td>
+								</tr>
+								<tr>
+									<td><span>Почтовый  адрес:</span></td>
+									<td><span>108811, г. Москва, 22-й километр Киевского <br/>шоссе,  п. Московский, домовл. 4, стр.2,<br/> блок Г, офис 353Г</span></td>
+								</tr>
+								<tr>
+									<td><span>Банковские реквизиты:</span></td>
+									<td>
+										<span>
+											ООО КБ «СЛАВЯНСКИЙ КРЕДИТ» г. Москва<br/>
+											БИК  044525805<br/>
+											К/С  30101810845250000805<br/>
+											Р/С  40702810300000016306<br/><br/>
+											ООО «Банк «МБА-МОСКВА» Г. МОСКВА<br/>
+											БИК  044525502<br/>
+											К/С  30101810000000000502<br/>
+											Р/С  40702810200000002258
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td><span>Телефон:</span></td>
+									<td><span>+7 495 2870700</span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>
+			<div class="footer--copyright">
+				<div class="container">
+					<div class="row copyright--row align-items-center justify-content-between flex-wrap">
+						<p>© 2018 Niagara Group</p>
+						<a href="#">Создание сайта - компания “ВебПульт”</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!--Скрипты-->
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script src="styles/js/jquery-3.3.1.js"></script>
+		
+		<script src="styles/inputmask/jquery.inputmask.bundle.js"></script>
+		<script src="styles/inputmask/phone.js"></script>
+		<script src="styles/inputmask/phone-ru.js"></script>
+		
+		<script src="styles/slick/slick.js"></script>
+		<script src="styles/js/main.js"></script>
+	</body>
+</html>
